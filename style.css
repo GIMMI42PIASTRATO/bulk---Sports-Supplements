@@ -112,7 +112,7 @@ body{
     text-decoration: none;
     
     font-weight: 600;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 #fristNavLink {
@@ -130,13 +130,50 @@ body{
 
 
 /* Start main image*/
-
-.mainImageContainer {
-    width: 1400px;
-    height: 576px;
+.mainContent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
 }
 
-.mainImageContainer > img{
+.mainImageContainer {
+    position: relative;
+    width: 1400px;
+    height: 576px;
+
+}
+
+.mainImageContainer > img {
+    position: absolute;
     width: 100%;
     height: auto;
+}
+
+.imageTextContainer {
+    position: relative; /* Rimuove la posizione static al elmento che lo faceva posizionare sotto all'immagine */
+    display: inline-block;
+    max-width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+    color: white;
+}
+
+.imageTextContainer div:first-child {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.imageTextContainer div:nth-child(2) {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 5.5rem;
+}
+
+.promoContainer {
+    position: absolute;
+    top: 100%;
 }
